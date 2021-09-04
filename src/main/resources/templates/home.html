@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>HOME PAGE</h1>
+<p>메뉴를 선택하세요</p>
+<ul>
+    <li><a th:href="@{/login}">Login</a></li>
+    <li><a href="https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email&access_type=offline&include_granted_scopes=true&state=state_parameter_passthrough_value&redirect_uri=http://localhost/login/google/callback&response_type=code&client_id=420224900119-t1l2f25ldqvp89jio4c85irajp14d2mf.apps.googleusercontent.com">google 로그인</a> </li>
+    <li><a href="https://kauth.kakao.com/oauth/authorize?client_id=8ceb5f0ed04f5199648a83ecdd267953&redirect_uri=http://localhost/login/kakao/callback&response_type=code">kakao 로그인</a> </li>
+    <li><a th:href="@{/board}">Board</a></li>
+</ul>
+</body>
+</html>
