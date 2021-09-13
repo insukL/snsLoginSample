@@ -125,7 +125,7 @@ public class UserServiceImpl implements UserService {
 
         // 지정된 URI로 Token을 보내서 restResponse를 받음
         ResponseEntity<kakaoUser> restRepsonse = restTemplate.postForEntity(url, restRequest, kakaoUser.class);
-        System.out.println("카카오 유저 ID : " + restRepsonse.getBody().getId());
+        System.out.println(restTemplate.postForEntity(url, restRequest, String.class).getBody());
         return restRepsonse.getBody();
     }
 }
